@@ -28,6 +28,14 @@ def gerar_pergunta:
     numero2 = gerar_numero
     print(f"Quanto é {numero1} + {numero2}")
 
+def conferi_resultado (resultado, resposta):
+    resultado = numero1 + numero2
+    resposta = input("Resposta:")
+    if int(resposta) == resultado
+    print("Acertou!")
+    else:
+        print("Errou!")
+
 
 
 
