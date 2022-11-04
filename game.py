@@ -23,6 +23,10 @@ countdown(int(t))
 def gerar_numero:
     return random.randint(50,500)
 
+def gerar_pergunta:
+    numero1 = gerar_numero
+    numero2 = gerar_numero
+    print(f"Quanto é {numero1} + {numero2}")
 
 
 
