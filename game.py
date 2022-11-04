@@ -1,6 +1,5 @@
 import random 
-import time 
-score = 0
+import time
 
 print("Bem-vindo ao Quiz Matemático")
 user = input ("Vamos começar? (sim/não):")
@@ -17,30 +16,37 @@ def countdown(t):
         time.sleep(1) 
         t -= 1
     print('VALENDO!!') 
-t = (5) 
-countdown(int(t)) 
+t = (2) 
+countdown(int(t))
 
-def gerar_numero:
+def gerar_numero():
     return random.randint(50,500)
 
-def gerar_pergunta:
-    numero1 = gerar_numero
-    numero2 = gerar_numero
-    print(f"Quanto é {numero1} + {numero2}")
+def gerar_pergunta():
+    numero1 = gerar_numero()
+    numero2 = gerar_numero()
+    resposta = int(input(f"Quanto é {numero1} + {numero2}: "))
+    resultado = numero1 + numero2
+    return conferi_resultado(resultado, resposta)
 
 def conferi_resultado (resultado, resposta):
-    resultado = numero1 + numero2
-    resposta = input("Resposta:")
-    if int(resposta) == resultado
-    print("Acertou!")
+    if resposta == resultado:
+        return True
     else:
-        print("Errou!")
+        return False
 
-
-
-
-
-
-
-
-
+def principal():
+    perguntas = int(input("Quantas perguntas voce quer: "))
+    perguntas_iniciais = perguntas
+    acertos = 0
+    while perguntas:
+        resultado = gerar_pergunta()
+        if resultado:
+            acertos += 1
+            print("Acertou!")
+        else:
+            print("Errou!")
+        perguntas -= 1
+    print(f"Você acertou {acertos} de {perguntas_iniciais} perguntas.")
+    
+principal()
